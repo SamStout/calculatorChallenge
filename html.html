@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+      <form action="#">
+        <main>
+<!-- everything thrown into main so can easily format to mobile -->
+            <h1>Calculator</h1>
+<!--box for first value, drop down for math symbol and box for 2nd value  -->
+            <p> First Value
+                <input class="input" id="firstValue" type="number">
+            </p>
+            
+            <label for="mathSymbolmenu">Choose a symbol:</label>
+                <select id="symbols" name="symbols">
+                    <option value="-">subtract</option>
+                    <option value= "+">add</option>
+                    <option value="*">multiply</option>
+                    <option value="/">divide</option>
+                </select>
+
+            <p> Second Value
+                <input class="input" id="secondValue" type="number">
+            </p>
+            
+            <button>calculate result</button>
+        </main>
+      </form>
+    <script src="script.js"></script>        
+    </body>
+</html>
