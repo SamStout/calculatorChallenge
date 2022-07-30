@@ -14,21 +14,22 @@ const nine = document.querySelector("#nine");
 const zero = document.querySelector("#zero");
 const equals = document.querySelector("#equals");
 const clear = document.querySelector("#clear");
-const decimals =document.querySelector("#decimals");
+const decimals = document.querySelector("#decimals");
 const symbol = document.querySelector(".symbol");
-const button = document.querySelector("button");
 const display = document.querySelector("#display");
-const input = document.querySelector("input")
-
-const displayArr = [0]
-input.innerHTML = displayNumber
-const displayNumber = displayArr[i]
+const input = document.querySelector("input");
+const div = document.querySelector("div");
+const operant = document.querySelector("operant");
+const button = document.querySelector("button");
+const number = document.querySelectorAll(".number")
 //// 2 arrays put value of input into array as strings
 // operator button logs and contacts and converts array values into integer
 
-const inputValue = () => {display.innerHTML = displayNumber;{
- displayNumber = displayArr.push(button.value)
-}
-}
 
-button.addEventListener(click,inputValue);
+
+
+//document.getElementById.addEventListener("click", inputValue)
+function inputValue (){
+    alert ("hi")
+};
+inputValue
