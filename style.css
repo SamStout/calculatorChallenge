@@ -13,9 +13,12 @@ body{
 
 .calculator {
     display: grid;
+    grid-column: 2fr, 2fr, 2fr, 2fr;
     justify-content: center;
     align-content: center;
-    min-width: 0;
+    min-width: 300px;
+    max-width: 300px;
+    border: 10px red solid;
 
 }
 
@@ -35,19 +38,23 @@ main {
 
 
 
-button{
+.buttons{
     background-color: rgb(147, 235, 207);
     font-size: 50px;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-bottom:rgb(131, 185, 180) solid 8px ;
-    border-right:rgb(131, 185, 180) solid 8px ;
+    border-bottom:rgb(235, 235, 235) solid 1px ;
+    border-right:rgb(235, 235, 235) solid 1px ;
     height: 1fr;
     width: 1fr;
 }
 
+#equals{
+    grid-row-start: span 2;
+}
+
 #clear{
-    grid-column-start: span 4;
+    grid-column-start: span 3;
 }
 
 

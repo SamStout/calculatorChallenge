@@ -1,7 +1,6 @@
 const buttons = document.querySelector(".buttons");
-const calculator = document.querySelector(".calculator")
-const savedValueDisplay = calculator.querySelector("#savedValueDisplay")
-const display =  calculator.querySelector("#display");
+const calculator = document.querySelector(".calculator") 
+const display =  calculator.querySelector("input");
 //const button = document.querySelectorAll("button");
 
 //function for inputting,
@@ -14,21 +13,13 @@ const display =  calculator.querySelector("#display");
 // += adds button input value string to current display
 //by using event.target.value only number buttons/decimal are being hit
 
-
 const inputValue = () => {
     if (display.value === "0") {
-            display.value = event.target.value
-    } else if (event.target.id === "clear") {
-            display.value = "0";
-    } else if (event.target.class = "number") {
-        display.value += event.target.value; 
-    } else (event.target.class = "symbols"); {
-            console.log(event.target.type)
-            //savedValueDisplay.value = display.value + ;
-        } 
+        display.value = event.target.value
+    } else {
+    display.value += event.target.value; 
     }
-
-
+}
 
 
 
