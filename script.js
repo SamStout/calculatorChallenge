@@ -1,7 +1,9 @@
 const buttons = document.querySelector(".buttons");
 const calculator = document.querySelector(".calculator")
+const operatorButtons = calculator.querySelector(".operator");
 const savedValueDisplay = calculator.querySelector("#savedValueDisplay")
 const display =  calculator.querySelector("#display");
+
 //const button = document.querySelectorAll("button");
 
 //function for inputting,
@@ -14,6 +16,7 @@ const display =  calculator.querySelector("#display");
 // += adds button input value string to current display
 //by using event.target.value only number buttons/decimal are being hit
 
+ 
 
 const inputValue = () => {
     if (display.value === "0") {
@@ -22,15 +25,18 @@ const inputValue = () => {
             display.value = "0";
     } else if (event.target.class = "number") {
         display.value += event.target.value; 
-    } else (event.target.class = "symbols"); {
-            console.log(event.target.type)
-            //savedValueDisplay.value = display.value + ;
-        } 
+        //savedValueDisplay.value = display.value + ;
+    }  else if(event.target.class = "symbols") {
+    alert("imgey");
     }
+    } 
+    
+const operatorFunc = () => {
+    savedValueDisplay.value = `${display.value + (event.target.innerHTML)}`;
+    };
 
-
-
-
+//(event.target.class = "symbols")
+operatorButtons.addEventListener("click",operatorFunc);
 
 buttons.addEventListener("click",inputValue);
 //make buttons inuput values into display, then make equals process the equation put in
