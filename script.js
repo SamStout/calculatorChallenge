@@ -29,7 +29,6 @@ const inputValue = () => {
                     display.value = "0";
             } else if (event.target.class = "number") {
                 display.value += event.target.value; 
-                //savedValueDisplay.value = display.value + ;
             } 
     }}
 
@@ -38,13 +37,17 @@ const operatorFunc = () => {
     display.value = "0" };
 
 const equalsFunc = ()=> {
+    if (wasEqualsLastPressed === false) { 
     savedValueDisplay.value += display.value;
     let fullEquation = savedValueDisplay.value;
     let result = (Function("return "+ fullEquation)());  
-    display.value = (result);
+    display.value = result;
     wasEqualsLastPressed = true;
+} else {
+    console.log("oopsies")
 }
-//const result = secondValueDisplay += savedValueDisplay;
+
+}
 
 equalsButton.addEventListener("click", equalsFunc);
 

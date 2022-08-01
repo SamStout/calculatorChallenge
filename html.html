@@ -5,34 +5,48 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style1.css">
         
     </head>
     <body>  
             <main class="calculator">
-                <input value="" id="savedValueDisplay">
-                <input value="0" id="display">
+                <div class="inputs">
+                <input value="" id="savedValueDisplay" disabled>
+                <input value="0" id="display" disabled>
+                </div>
                 <div class="buttons">
-                    <div class="operator">
+                    <div class="operator" class="row">
                         <button id="multiply" type="*">*</button>
                         <button id="minus" type="-">-</button>
                         <button id="plus" type="+">+</button>
                         <button id="divide" type="/">/</button>
                     </div>
-                    <button id="zero" class="number" value="0">0</button>
-                    <button id="one" class="number" value="1">1</button>
-                    <button id="two" class="number" value="2">2</button>
-                    <button id="three" class="number" value="3">3</button>
-                    <button id="four" class="number" value="4">4</button>
-                    <button id="five" class="number" value="5">5</button>
-                    <button id="six" class="number" value="6">6</button>
-                    <button id="seven" class="number" value="7">7</button>
-                    <button id="eight" class="number" value="8">8</button>
-                    <button id="nine" class="number" value="9">9</button>
-                    <button id="decimal" value= "." class="extras">.</button>
-                    <button id="clear" class="extras">AC</button>
+
+                    <div class="row">
+                        <button id="zero" class="number" value="0">0</button>
+                        <button id="one" class="number" value="1">1</button>
+                        <button id="two" class="number" value="2">2</button>
+                        <button id="three" class="number" value="3">3</button>
                     </div>
-                    <button id="equals" class="extras">=</button>
+                    
+                    <div class="row">
+                        <button id="four" class="number" value="4">4</button>
+                        <button id="five" class="number" value="5">5</button>
+                        <button id="six" class="number" value="6">6</button>
+                        <button id="seven" class="number" value="7">7</button>
+                    </div>
+
+                    <div class="row">
+                        <button id="eight" class="number" value="8">8</button>
+                        <button id="nine" class="number" value="9">9</button>
+                        <button id="decimal" value= "." class="extras">.</button>
+                        <button id="clear" class="extras">AC</button>
+                    </div>
+                </div>
+                <div class="equalsbutton">
+                     <button id="equals" class="extras">=</button>
+                </div>
+                
             </main>
         
     <script src="script.js"></script>        
