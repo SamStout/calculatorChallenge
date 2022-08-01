@@ -18,7 +18,7 @@ const equalsButton = document.querySelector("#equals")
 //by using event.target.value only number buttons/decimal are being hit
 
 let wasEqualsLastPressed = false;
-//prevents the = button from taking the display value and adding to savedValueDisplay
+//prevents the = button from taking the display value and adding to savedValueDisplayss
 
 const inputValue = () => {
     if (wasEqualsLastPressed === true) {
