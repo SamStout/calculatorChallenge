@@ -9,8 +9,6 @@
     display: grid;
     grid-template-rows: 35% 65%;
     grid-template-columns: 100%;
-    
-
 }
 
 input {
@@ -33,9 +31,11 @@ main {
 body {
     display: flex;
     text-align: center;
+    justify-content: center;
     background-color: bisque;
     height: 100vh;
     max-width: 75%;
+    padding-left: 10%;
 }
 
 .operator {
