@@ -3,6 +3,7 @@ const calculator = document.querySelector(".calculator")
 const operatorButtons = calculator.querySelector(".operator");
 const savedValueDisplay = calculator.querySelector("#savedValueDisplay")
 const display =  calculator.querySelector("#display");
+const equalsButton = document.querySelector("#equals")
 
 //const button = document.querySelectorAll("button");
 
@@ -15,30 +16,40 @@ const display =  calculator.querySelector("#display");
 // second statememt then adds button input to currently displayed 
 // += adds button input value string to current display
 //by using event.target.value only number buttons/decimal are being hit
-
- 
+let wasEqualsLastPressed = false;
 
 const inputValue = () => {
-    if (display.value === "0") {
-            display.value = event.target.value
-    } else if (event.target.id === "clear") {
-            display.value = "0";
-    } else if (event.target.class = "number") {
-        display.value += event.target.value; 
-        //savedValueDisplay.value = display.value + ;
-    }  else if(event.target.class = "symbols") {
-    alert("imgey");
-    }
-    } 
-    
+    if (wasEqualsLastPressed === true) {
+        display.value = event.target.value;
+        wasEqualsLastPressed = false ;
+    } else {
+            if (display.value === "0") {
+                    display.value = event.target.value
+            } else if (event.target.id === "clear") {
+                    display.value = "0";
+            } else if (event.target.class = "number") {
+                display.value += event.target.value; 
+                //savedValueDisplay.value = display.value + ;
+            } 
+    }}
+
 const operatorFunc = () => {
     savedValueDisplay.value = `${display.value + (event.target.innerHTML)}`;
-    };
+    display.value = "0" };
 
-//(event.target.class = "symbols")
+const equalsFunc = ()=> {
+    savedValueDisplay.value += display.value;
+    let fullEquation = savedValueDisplay.value;
+    let result = (Function("return "+ fullEquation)());  
+    display.value = (result);
+    wasEqualsLastPressed = true;
+}
+//const result = secondValueDisplay += savedValueDisplay;
+
+equalsButton.addEventListener("click", equalsFunc);
+
 operatorButtons.addEventListener("click",operatorFunc);
 
 buttons.addEventListener("click",inputValue);
 //make buttons inuput values into display, then make equals process the equation put in
 // use function () to run string in display
-
