@@ -72,4 +72,6 @@ button {
 #equals{
     background-color: rgb(179, 139, 65);
     color: white;
+    border-bottom-style: groove;
 }
+
