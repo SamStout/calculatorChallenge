@@ -20,6 +20,7 @@ const equalsButton = document.querySelector("#equals")
 let wasEqualsLastPressed = false;
 //prevents the = button from taking the display value and adding to savedValueDisplayss
 
+
 const inputValue = () => {
     if (wasEqualsLastPressed === true) {
         display.value = event.target.value;
@@ -31,7 +32,9 @@ const inputValue = () => {
                     display.value = "0";
             } else if (event.target.class = "number") {
                 display.value += event.target.value; 
-            } 
+            } else if (display === Infinity) {
+                console.log("hello")
+            }
     }}
 
 const operatorFunc = () => {
@@ -43,9 +46,11 @@ const equalsFunc = ()=> {
     savedValueDisplay.value += display.value;
     let fullEquation = savedValueDisplay.value;
     let result = (Function("return "+ fullEquation)());  
-    display.value = result;
     wasEqualsLastPressed = true;
-
+    display.value = result; {
+    if (result === Infinity) {
+        display.value = "ERROR"
+    }}
     // takes the saved value in top input box and adds the value in the main display
     //uses Function to process the concatenation of the string and displays the result
     // in display. 
@@ -54,7 +59,6 @@ const equalsFunc = ()=> {
 } else {
     console.log("oopsies")
 }
-
 }
 
 equalsButton.addEventListener("click", equalsFunc);
