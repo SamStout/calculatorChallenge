@@ -16,7 +16,9 @@ const equalsButton = document.querySelector("#equals")
 // second statememt then adds button input to currently displayed 
 // += adds button input value string to current display
 //by using event.target.value only number buttons/decimal are being hit
+
 let wasEqualsLastPressed = false;
+//prevents the = button from taking the display value and adding to savedValueDisplay
 
 const inputValue = () => {
     if (wasEqualsLastPressed === true) {
@@ -43,6 +45,12 @@ const equalsFunc = ()=> {
     let result = (Function("return "+ fullEquation)());  
     display.value = result;
     wasEqualsLastPressed = true;
+
+    // takes the saved value in top input box and adds the value in the main display
+    //uses Function to process the concatenation of the string and displays the result
+    // in display. 
+    // Then changes wasEqualsLastPressed to true to prevent concatenation and 
+    //  calculation of the result with the full equation
 } else {
     console.log("oopsies")
 }
@@ -55,4 +63,4 @@ operatorButtons.addEventListener("click",operatorFunc);
 
 buttons.addEventListener("click",inputValue);
 //make buttons inuput values into display, then make equals process the equation put in
-// use function () to run string in display
+// use Function () to run string in display
