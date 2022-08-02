@@ -1,16 +1,15 @@
 const buttons = document.querySelector(".buttons");
 const calculator = document.querySelector(".calculator")
 const operatorButtons = calculator.querySelector(".operator");
-const savedValueDisplay = calculator.querySelector("#savedValueDisplay")
+const savedValueDisplay = calculator.querySelector("#savedValueDisplay");
 const display =  calculator.querySelector("#display");
-const equalsButton = document.querySelector("#equals")
+const equalsButton = document.querySelector("#equals");
 
 //const button = document.querySelectorAll("button");
-
 //function for inputting,
 //event.target
 //display.value is whats shown in an input field. set
-//event.target.value shows values put into html
+//event.target.value shows values put into html of buttons
 //started value of 0 for inial input, first if statement checks
 // to see if its a zero then if it is replaces the value,
 // second statememt then adds button input to currently displayed 
@@ -45,7 +44,7 @@ const equalsFunc = ()=> {
     if (wasEqualsLastPressed === false) { 
     savedValueDisplay.value += display.value;
     let fullEquation = savedValueDisplay.value;
-    let result = (Function("return "+ fullEquation)());  
+    let result = (Function("return "+ fullEquation)()); 
     wasEqualsLastPressed = true;
     display.value = result; {
     if (result === Infinity) {
