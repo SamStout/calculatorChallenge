@@ -32,7 +32,7 @@ body {
     display: flex;
     text-align: center;
     justify-content: center;
-    background-color: bisque;
+    background-color: lightgoldenrodyellow;
     height: 100vh;
     max-width: 75%;
     padding-left: 10%;
@@ -78,3 +78,6 @@ button {
     border-bottom-style: groove;
 }
 
+.operator button  {
+    background-color: ivory;
+}

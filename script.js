@@ -1,8 +1,8 @@
 const buttons = document.querySelector(".buttons");
 const calculator = document.querySelector(".calculator")
-const operatorButtons = calculator.querySelector(".operator");
-const savedValueDisplay = calculator.querySelector("#savedValueDisplay");
-const display =  calculator.querySelector("#display");
+const operatorButtons = document.querySelector(".operator");
+const savedValueDisplay = document.querySelector("#savedValueDisplay");
+const display =  document.querySelector("#display");
 const equalsButton = document.querySelector("#equals");
 
 //const button = document.querySelectorAll("button");
@@ -35,6 +35,9 @@ const inputValue = () => {
                 console.log("hello")
             }
     }}
+
+//if redo calc, throw things into array, 
+
 
 const operatorFunc = () => {
     savedValueDisplay.value = `${display.value + (event.target.innerHTML)}`;
